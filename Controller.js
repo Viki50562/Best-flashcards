@@ -11,8 +11,14 @@ class Controller {
     // после того, как завершится асинхронная операция чтения папки
     // Здесь this.printTopicsController — является callback'ом  
     //this.model.readTopics(this.printTopicsController)
-    
+    this.model.loadQuestionsMenuFromFiles();
+
     this.view.showCategories(['Ястребы', 'Выдры', 'Еноты']);
+    const selectedCategory = this.view.getCategory();
+    // далее зная выбранную челом категорию можно обратиться к модели и попросить у модели список вопросов
+    // затем обратиться ко view и вызвать функцию showQuestion
+  
+    
   }
 
   printTopicsController(topicsMenu) {

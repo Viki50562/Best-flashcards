@@ -1,19 +1,14 @@
-const readLine = require('readline');
+const readLine = require('readline-sync');
 
 class View {
   rl; 
-  constructor() {
-    this.rl = readLine.createInterface(process.stdin, process.stdout);
-  }
+  controller;
+
+  constructor() {  }
 
   //Тут вывожу просто конкретный вопрос
   showQuestion(question) {
-    this.rl.question(question, (answer) => {
-      // console.log(answer) (просто проверочный);
-
-      //Тут вызываю Controller, в метод которого полетят вопрос и ответ, но это неточно!!!
-
-    })
+    const answer = readLine.question(question);
   }
 
   //Тут вывожу эмодзи в зависимости от результата проверки ответа из модели
@@ -26,6 +21,11 @@ class View {
     categoriasList.forEach((el, index) => {
       console.log(`${index + 1}. ${el}`);
     });
+  }
+
+  getCategory() {
+    const answer = readLine.question('Выберите категорию: ');
+    return answer;
   }
 }
 
