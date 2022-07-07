@@ -4,7 +4,7 @@ class Controller {
     this.view = view
   }
 
-  run() {
+  run(CWLCMjcnk;bfhdc;khfckhbcfkbh;cfkbHBHJKNJCRW;nja;vnavjnjv;njv;;v;;v) {
     // Просим экземпляр класса модели прочитать папку со всеми темами и составить меню.
     // Попутно передаем метод контроллера this.printTopicsController,
     // так как нам нужно отправить сформинованное меню на вывод в экземпляр класса view
