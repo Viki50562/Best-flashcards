@@ -4,13 +4,15 @@ class Controller {
     this.view = view
   }
 
-  run(CWLCMjcnk;bfhdc;khfckhbcfkbh;cfkbHBHJKNJCRW;nja;vnavjnjv;njv;;v;;v) {
+  run() {
     // Просим экземпляр класса модели прочитать папку со всеми темами и составить меню.
     // Попутно передаем метод контроллера this.printTopicsController,
     // так как нам нужно отправить сформинованное меню на вывод в экземпляр класса view
     // после того, как завершится асинхронная операция чтения папки
     // Здесь this.printTopicsController — является callback'ом  
-    this.model.readTopics(this.printTopicsController)
+    //this.model.readTopics(this.printTopicsController)
+    
+    this.view.showCategories(['Ястребы', 'Выдры', 'Еноты']);
   }
 
   printTopicsController(topicsMenu) {
