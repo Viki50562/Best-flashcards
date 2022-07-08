@@ -36,12 +36,39 @@ raccooonQuestions;
 
   getQuestionListByCategory(category) {
     // Будет возвращать набор вопросов
-    return;
+    if (category === 'Ястребы') {
+      const questions = [];
+      for(let i = 0; i < this.nighthawkQuestions.length; i += 1) {
+        questions.push(this.nighthawkQuestions[i].question)
+      }
+      //console.log(questions);
+      return questions;
+    }
+    if (category === 'Выдры') {
+      const questions = [];
+      for(let i = 0; i < this.otterQuestions.length; i += 1) {
+        questions.push(this.otterQuestions[i].question)
+      }
+      //console.log(questions);
+      return questions;
+    }
+    if (category === 'Еноты') {
+      const questions = [];
+      for(let i = 0; i < this.raccooonQuestions.length; i += 1) {
+        questions.push(this.raccooonQuestions[i].question)
+      }
+      //console.log(questions);
+      return questions;
+    }
   }
 
   checkIncorrectAnswer() {
 
   }
 }
+
+// const model = new Model();
+// model.loadQuestionsMenuFromFiles()
+// model.getQuestionListByCategory('Выдры')
 
 module.exports = Model
